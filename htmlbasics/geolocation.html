@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Geolocation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <button onclick = "getMyLocation()">Run Geolocation</button>
+    <div id = "result">Result will be displayed here</div>
+    <script>
+        function getMyLocation() {
+            navigator.geolocation.getCurrentPosition(locationSuccess,locationFail);
+        }
+        function locationSuccess(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("result").innerHTML = "location in latitude and longitude is "+
+                                                    latitude + " and " + longitude;
+        }
+        function locationFail() {
+            alert("fail");
+        }
+    </script>
+</body>
+</html>
