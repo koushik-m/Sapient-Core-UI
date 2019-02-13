@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        p:nth-last-child(2n) {
+            color: red;
+        }
+        p:nth-child(2n+1) {
+            color: green;
+        }
+        button:hover {
+            color: blue;
+            background-color: yellow;
+        }
+        p::first-letter {
+            color: blueviolet;
+            text-transform: capitalize;
+        }
+        .test:hover {
+            text-transform: uppercase;
+        }
+        
+    </style>
+</head>
+<body>
+    <button class="test">Check</button>
+    <p>This is para 1</p>
+    <p>This is para 2</p>
+
+    <p>This is para 3</p>
+
+    <p>This is para 4</p>
+</body>
+</html>

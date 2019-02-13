@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div > p {
+            background-color: yellow;
+        }
+        div ~ p {
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            para 1 in the div.
+        </p>
+        <p>
+            para 2 in the div.
+        </p>
+        <p>
+                <span>
+                        <p>
+                                para 3 in the div.
+                            </p>
+                </span>
+        </p>
+       
+        
+    </div>
+    <p>para 4</p>
+    <p>para 5   </p>
+
+</body>
+</html>
+
+<!-- 
+    > is for direct children
+    ~ is for siblings
+ -->
