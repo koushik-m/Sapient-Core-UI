@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        h1 {
+            color: red ;
+            font-style: italic; 
+        }
+        #h1Demo {
+            color: green;
+        }
+        .h1Class {
+            color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS3</h1>
+    <h1 id="h1Demo">I am ID based.</h1>
+    <h1 id="h1Demo" class="h1Class" style="color:blueviolet ">I am class based.</h1> 
+    <!-- *Inline styling has most precedence over id and class
+         *ID based has more precedence over class
+         *Inline > id > class > tag -->
+</body>
+</html>
