@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+ 
+        .center {
+            text-align: center;
+        }
+        .dimension {
+            height: 100px;
+            width: 600px;
+        }
+
+        .alignment {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        body {
+            background-color: beige;
+        }
+
+        .shadow {
+            box-shadow: 2px 2px 10px 10px rgb(199, 196, 195);
+        }
+
+        .lineargrad {
+            background: linear-gradient(to bottom left, red, yellow);
+        }
+
+        .linearGradientTopToBottom {
+            background: linear-gradient(red, green);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="center">Example CSS</h1>
+    
+    <div class="shadow dimension alignment linearGradientTopToBottom center">
+        Use of linear gradient background-color. 
+    </div>
+</body>
+
+</html>
+
+<!-- 2px 2px 10px 100px rgb(199, 196,195) ===> top, right, blur radius and spread radius -->
