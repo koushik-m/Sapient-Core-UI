@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        #container {
+            border:3px solid red;
+            overflow: auto;
+
+        }
+        @media screen and (min-width: 600px) {
+            nav {
+                border:3px solid green;
+                float: left;
+                width: 25%;
+            }
+            section {
+                border: 3px solid yellow;
+                margin-left: 25%;
+            }
+        }
+
+        @media screen and (max-width: 599px) {
+            nav li {
+                display: inline;
+
+            }
+            nav {
+                border: 3px solid pink;
+            }
+            section {
+                border: 3px solid grey;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+     <div id="container">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+        </nav>
+        <section>this is the first section.</section>
+        <section>this is the first section.</section>
+        
+    </div>
+</body>
+</html>
