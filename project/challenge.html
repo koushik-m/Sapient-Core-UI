@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #element {
+            position: relative;
+            left: 350px;
+            width: 600px;
+            height: 50px;
+            background-color: beige;
+            border: 2px solid grey;
+            margin: 50px;
+            text-align: center;
+            font-size: 150%;
+            transform: rotate(5deg);
+            text-shadow: 2px 2px red;
+        }
+
+        .shadow {
+            box-shadow: 5px 5px goldenrod;
+        }
+
+        .new {
+            position: relative;
+            margin-top: 50px;
+            left: 10%;
+            width: 80%;
+            height: auto;
+            background-color: beige;
+            border: 2px solid grey;
+            text-align: center;
+            font-size: 150%;
+            text-shadow: 2px 2px red;
+        }
+
+        .new:hover {
+            box-shadow: 5px 5px blue;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            margin-top: 70px;
+            border: 2px dashed blue;
+        }
+
+        .leftclass {
+            width: 25%;
+            float: left;
+
+        }
+
+        .rightclass {
+            width: 25%;
+            float: right;
+        }
+
+        .leftclass>div:nth-child(2n) {
+            transform: rotate(5deg);
+        }
+
+        .leftclass>div:nth-child(2n+1) {
+            transform: rotate(-5deg);
+        }
+
+        .rightclass>div:nth-child(2n) {
+            transform: rotate(5deg);
+        }
+
+        .rightclass>div:nth-child(2n+1) {
+            transform: rotate(-5deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="element" class="shadow">New Clipping for Today</div>
+
+    <div class="container">
+        <div class="leftclass">
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+        </div>
+        <div class="leftclass">
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+        </div>
+        <div class="leftclass">
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+        </div>
+        <div class="rightclass">
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+            <div class="new shadow">New Clipping for Today</div>
+        </div>
+    </div>
+</body>
+
+</html>
