@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img {
+            height:200px;
+            width:200px;
+            margin: 0;
+            border: 3px solid green;
+            display: auto;
+        }
+        .float-left {
+            float:left;
+        }
+        .float-right {
+            float: right;
+        }
+        #outer {
+            margin-top: 100px;
+            margin-left: 40px;
+            width: 670px;
+            border: 2px solid red;
+            padding: 10px;
+            
+        }
+        /* #last-element {
+            clear: both;
+        } */
+        .clear-fix:before, .clear-fix:after {
+            content: "";
+            display: table;
+        }
+        .clear-fix::after {
+            clear:both;
+        }
+        #test {
+            
+            margin:auto;
+            border: 3px solid blue;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "outer" class="clear-fix">
+        The content is part of outer div 
+        <img class="float-left" src="1.jpeg"    >
+        <img class="float-right" src="2.jpg">
+        
+        <!-- <div id="last-element"></div> -->
+    </div>
+    <div id="test">
+            content hidden<br>hey there!<br>
+    </div>
+    
+    </div>
+</body>
+</html>
+<!-- 
+clear-fix is used to clear the float properties before and after the content.
+can also be done by adding a end div element -->
