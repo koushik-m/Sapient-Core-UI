@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PCanvas</title>
+</head>
+<body>
+    <canvas width="1500" height="1300" id="canvas"></canvas>
+    <script> var canvas = document.getElementById('canvas');
+    var c = canvas.getContext('2d');
+     c.fillStyle = "red";
+    // c.fillRect(50,10,3000,2000);
+    c.beginPath();
+    c.moveTo(30,20);
+    c.lineTo(200,50);
+    c.lineTo(126,90);
+    c.closePath();
+    c.fill();
+    c.strokeStyle = 'rgb(0,128,0)';
+    c.lineWidth = 5;
+    c.stroke();
+
+    var ctx = document.getElementById('canvas').getContext('2d');
+    ctx.fillStyle = "black";
+    ctx.font = "bold " +70+ "pt Arial";
+    ctx.fillText("I miss my childhood days!",50, 150);
+    </script>
+</body>
+</html>
