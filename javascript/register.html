@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resize Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="register.js"></script>
+    <style>
+        .bs-example div[class^="col"] {
+            border: 1px solid black;
+            background: #f5f5f5;
+            text-align: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+        }
+
+        .border {
+            border: 1px solid black;
+            background-color: gray
+        }
+
+        h1 {
+            border: 1px solid black;
+            padding: 2px;
+            text-align: center;
+        }
+    </style>
+</head>
+<!-- For input controls we use form-control class -->
+
+<body>
+
+
+    <!-- Bootstrap Grid -->
+    <form>
+        <h1>Registration Form</h1>
+        <div class="container-fluid">
+            <div class="row mt-2 ml-5">
+                <label class="col-sm-2">Enter your name:</label>
+                <input type="text" id = "name" class="form-control col-sm-4 ml-3">
+            </div>
+            <div class="row mt-2 ml-5">
+                <label class="  col-sm-2">Enter your password:</label>
+                <input type="text" id="password" class="form-control col-sm-4 ml-3">
+            </div>
+            <div class="row mt-2 ml-5">
+                <label class=" col-sm-2">Gender:</label>
+                <div class="mt-2 ml-5">
+                    <label><input type="radio" name="gender" id="gender" value=""> Male</label>
+                </div>
+                <div class="mt-2 ml-5">
+                    <label><input type="radio" name="gender" id="gender" value=""> Female</label>
+                </div>
+
+            </div>
+            <div class="row mt-2 ml-5">
+                <label class="col-sm-2">Country:</label>
+                <select class="form-control col-sm-2 mt-2 ml-5" id="country">
+                    <option>India</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Canada</option>
+                </select>
+            </div>
+            <div class="row mt-2 ml-5">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <div class="row mt-2 ml-5 col-sm-2">
+
+                <button type="submit" class="btn btn-info mt-2 ml-1" onclick="test()">Submit</button>
+            </div>
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>
+<!-- danger,success,warning and info -->
+<!-- can be installed through npm, bower, yarn - support installing bootstrap -->
+<!-- form layouts - vertical form layout, horizontal form layout, inline layout -->
