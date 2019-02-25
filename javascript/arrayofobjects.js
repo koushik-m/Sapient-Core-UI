@@ -34,7 +34,7 @@
         //         dataRow.appendChild(dataColumn);
         //     }
         // }
-        var tbl = document.getElementById('tblEmployees');
+        var tbody = document.getElementById('tbody');
         for(var x in students) {
             var dataRow = createElement('tr');
             for(var columns in columnNames) {
@@ -42,14 +42,22 @@
                 dataColumn.innerHTML = students[x][columnNames[columns]];
                 dataRow.appendChild(dataColumn);
             }
+            var tdForButton = createElement('td');
+            var button = createElement('button');
+            button.innerHTML = "-"
+            button.className = 'btn btn-danger';
+            tdForButton.appendChild(button);
+            dataRow.appendChild(button);
             console.log(dataRow);
-            tbl.appendChild(dataRow);
+            tbody.appendChild(dataRow);
         }
     }
 
     function createTable() {
         var tbl = document.getElementById('tblEmployees');
-        tbl.appendChild(createHeaderRow());
+        tbl.className = 'table table-striped';
+        var theader = document.getElementById('theader');
+        theader.appendChild(createHeaderRow());
         createDataRow();
     }
     createTable();
