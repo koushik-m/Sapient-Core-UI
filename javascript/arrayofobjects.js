@@ -45,9 +45,9 @@
             var tdForButton = createElement('td');
             var button = createElement('button');
             button.innerHTML = "-"
-            button.className = 'btn btn-danger';
+            button.className = 'btn btn-danger ';
             tdForButton.appendChild(button);
-            dataRow.appendChild(button);
+            dataRow.appendChild(tdForButton);
             console.log(dataRow);
             tbody.appendChild(dataRow);
         }
@@ -59,7 +59,19 @@
         var theader = document.getElementById('theader');
         theader.appendChild(createHeaderRow());
         createDataRow();
+        var buttons = document.getElementsByClassName('btn');
+        for(var r=0; r<buttons.length;r++) {
+            buttons[r].addEventListener('click', function() {
+                this.parentNode.parentNode.remove();
+            })
+        }
     }
+
+    var newArray = students.filter(function(a,index){
+        return a.age>20;
+    });
+    //map method will give you a new array with additional properties to the item or reduced properties to the item.
+    
     createTable();
 
 
