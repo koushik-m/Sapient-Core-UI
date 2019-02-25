@@ -2,11 +2,12 @@
     'use strict';
     var students = [
         { name: 'Koushik', age: 20 },
-        { name: 'Koushik1', age: 24 },
+        { age: 24 , name: 'Koushik1'},
         { name: 'Koushik2', age: 23 },
         { name: 'Koushik3', age: 22 },
         { name: 'Koushik4', age: 21 },
     ];
+    var columnNames = [];
     var numberOfColumns;
     function createElement(elementType) {
         return document.createElement(elementType);
@@ -18,6 +19,7 @@
             var column = createElement('td');
             column.innerHTML = i;
             headerRow.appendChild(column);
+            columnNames.push(i);
         }
         console.log(headerRow);
         return headerRow;
@@ -35,9 +37,9 @@
         var tbl = document.getElementById('tblEmployees');
         for(var x in students) {
             var dataRow = createElement('tr');
-            for(var columns in students[x]) {
+            for(var columns in columnNames) {
                 var dataColumn = createElement('td');
-                dataColumn.innerHTML = students[x][columns];
+                dataColumn.innerHTML = students[x][columnNames[columns]];
                 dataRow.appendChild(dataColumn);
             }
             console.log(dataRow);
