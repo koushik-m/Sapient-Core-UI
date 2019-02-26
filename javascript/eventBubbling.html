@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "parent">
+        <button id="child">Click</button>
+    </div>
+    <script>
+        var parent = document.querySelector('#parent');
+        parent.addEventListener('click',function(e){
+            console.log("Parent clicked");
+            e.stopPropagation();
+        });
+        var child = document.querySelector('#child');
+        child.addEventListener('click',function(f) {
+            console.log("Child clicked");
+            f.stopPropagation();
+        });
+        var disable = document.addEventListener('contextmenu', function(e){
+            e.preventDefault();
+            alert("bad operation");
+            console.log(e.clientX, e.clientY);
+        })
+        </script>
+</body>
+</html>
+
+
+<!-- firstname, lastname, age, gender, dropdown for countries, button for submit, checkbox for agree terms and condition
+
+click agree terms and conditions the button should be enabled else disabled
+firsname and lastname user should enter only following characters only max leng 20 characters
+if the user is trying to enter more than 20 characters bootstrap based alert notification you can only enter 20 characters
+should be there only for 5 seconds
+age should not be greater than 99 and less than 18
+custom validation for required -->

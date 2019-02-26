@@ -3,3 +3,8 @@ GOOD PRACTICES
     - if you are planning any global variable do it in line 2.
     - wrap everything within immediate function
     - use window.function / window.variablename to use it as global variable.
+
+
+
+    26th Feb 2019
+    Event Bubbling
