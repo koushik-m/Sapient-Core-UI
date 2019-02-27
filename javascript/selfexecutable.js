@@ -21,5 +21,3 @@ var res = marks.filter((x)=>{
     return x%2==0;
 });
 var res1 = marks.filter(x=>x%2==0)
-
-const a = new 
