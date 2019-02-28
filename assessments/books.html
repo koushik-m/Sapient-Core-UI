@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="books.js"></script>
+</head>
+
+<body>
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4" align="center">Welcome to the Book Store</h1>
+                  <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+                </div>
+              </div>
+    <!-- <h1 align='center'>Welcome to the Book Store</h1> -->
+    <div class="container" id="wrapper">
+        <table class="table table-striped" align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+            <thead class="thead-dark">
+                <th>Author</th>
+                <th>Book Name</th>
+                <th>Date</th>
+                <th>Options</th>
+            </thead>
+
+            <tr id="row1">
+                <td id="author_row1">Haruki Murakami</td>
+                <td id="bookname_row1">Kafka on the shore</td>
+                <td type="date"id="date_row1">20-05-2001</td>
+                <td>
+                    <input type="button" id="edit_button1" value="Edit" class="btn btn-warning" onclick="edit_row('1')">
+                    <input type="button" id="save_button1" value="Save" class="btn btn-primary" onclick="save_row('1')">
+                    <input type="button" value="Delete" class="btn btn-danger" onclick="delete_row('1')">
+                </td>
+            </tr>
+
+            <tr id="row2">
+                <td id="author_row2">George R. R. Martin</td>
+                <td id="bookname_row2">The Song of Ice and Fire</td>
+                <td type="date" id="date_row2">02-04-1998</td>
+                <td>
+                    <input type="button" id="edit_button2" value="Edit" class="btn btn-warning" onclick="edit_row('2')">
+                    <input type="button" id="save_button2" value="Save" class="btn btn-primary" onclick="save_row('2')">
+                    <input type="button" value="Delete" class="btn btn-danger" onclick="delete_row('2')">
+                </td>
+            </tr>
+
+            <tr id="row3">
+                <td id="author_row3">Malcolm Gladwell</td>
+                <td id="bookname_row3">Outliers</td>
+                <td type="date" id="date_row3">19-07-2018</td>
+                <td>
+                    <input type="button" id="edit_button3" value="Edit" class="btn btn-warning" onclick="edit_row('3')">
+                    <input type="button" id="save_button3" value="Save" class="btn btn-primary" onclick="save_row('3')">
+                    <input type="button" value="Delete" class="btn btn-danger" onclick="delete_row('3')">
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="new_author"></td>
+                <td><input type="text" id="new_bookname"></td>
+                <td><input type="date" id="new_date"></td>
+                <td><input type="button" class="btn btn-info" onclick="add_row();" value="Add Row"></td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
