@@ -19,3 +19,7 @@ GOOD PRACTICES
     generators
     maps
     sets
+
+generator are a special class of functions that simplify the task of writing iterators
+a generator is a function that produces a sequence of results instead of single value, i.e. you 
+generate

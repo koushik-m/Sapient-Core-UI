@@ -1,12 +1,12 @@
 var promise = new Promise((resolve,reject) => {
-    console.log("Im second")
-    reject('I am the rejectedData');
+    
 
     if(true) {
         resolve('I am the resolved Data');
     } else {
         reject('I am the rejectedData');
     }
+    console.log("Im second")
 });
 promise.then(data=> {
     console.log(data);

@@ -3,6 +3,7 @@
     var btn = document.getElementById('btnTest');
     btn.addEventListener('click', function(e) {
         console.log(e);
+        console.log("hey this");
         console.log(this);
     })
     var key = document.getElementById('keyTest');
