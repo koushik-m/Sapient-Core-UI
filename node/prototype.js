@@ -1,0 +1,11 @@
+var obj1 = new Object();
+obj1.name = "koushik";
+var obj2 = new Object(obj1);
+// obj1.age = 13;
+console.log(obj1.hasOwnProperty('name'));
+console.log(obj1.hasOwnProperty('constructor'));
+console.log(obj2.hasOwnProperty('age'));
+obj1.age = 14;
+obj2.age = 15;
+console.log(obj2.age);
+console.log(obj1.age);
