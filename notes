@@ -1,0 +1,21 @@
+dont write the code 
+prepare the unit test
+create the function and leave it
+
+
+before each in jasmine
+        - this will execute for every test case;
+        - we will set required artifacts for the unit test.
+mocks in jasmine
+        - they are the dummy functions which really dont have any code, but acts as a real function
+        - we can create a mock and then we will return the data from the mock.
+        - they are helpful in simulating the behaviour of dummy servers, dummy http calls    
+
+
+FACTORY DESIGN PATTERN
+    - provide just interface. depending on input subclasses will decide what needs to be created
+    - very widely used in modern softwares.
+    - 
+MODULE DESIGN PATTERN
+    - all the methods will be kept private and you only expose those methods in the end to the client    
+
