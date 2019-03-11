@@ -19,3 +19,25 @@ FACTORY DESIGN PATTERN
 MODULE DESIGN PATTERN
     - all the methods will be kept private and you only expose those methods in the end to the client    
 
+TEST DRIVEN DEVELOPMENT CODE (PRECAUTIONS TO BE TAKEN)
+    - Make sure your code is not dependent on user interface.
+    - Make sure your code is following the SRP(single responsibility principle)
+    - Ensure that there are proper exception handling in your code.
+    - Ensure your functions have return statements.
+
+   The architecture is more flexible if we follow these steps.
+
+   -jasmine, mocha and jest are unit testing libraries
+   -chai is an assertion library
+   -sinon.js is a mock library (can create mock library)
+
+   steps 
+   - all the three libraries are having the describe function
+    purpose: we can create the environment
+             we can group the unit test.
+
+    IT function
+        the actual unit testing happens within the it methods
+    beforeeach method
+        This method will allow you to set the data or mock data or mock function 
+        This mock data can be set before execution of every unit test.                                                       
