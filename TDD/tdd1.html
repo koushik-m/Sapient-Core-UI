@@ -34,8 +34,24 @@
 
             return change;
         }
+        var userList;
+        function isAuthorizedPromise(user) {
+         
+            return new Promise(function(resolve, reject) {
+              try{
+              resolve(userList.filter(x=>x==user).length >= 1)
+         
+              } catch(ex) {
+                reject(ex);
+              }
+            
+            })
+          } 
+          
+          
+        
     </script>
-    <script>
+    <!-- <script>
       // This is what a simple unit test looks like:
       test('This sample test should always pass!', function(assert) {
         var result = 1 + 1;
@@ -52,6 +68,7 @@
         assert.equal(result, "Change provided.");
       });
       test('When payable=400 and paid="xxxx", i should get the change', function(){});
-    </script>
+    </script> -->
+    <script src="testPromise.js"></script>
   </body>
 </html>
