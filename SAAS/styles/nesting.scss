@@ -1,0 +1,11 @@
+@import 'test.scss';
+body #main .value {
+    color: #eee;
+    @include changeColor();
+
+
+a.link {
+    color: #101010;
+    text-decoration: none;
+}
+}

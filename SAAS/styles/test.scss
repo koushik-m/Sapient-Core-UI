@@ -1,0 +1,26 @@
+// ----
+// Sass (vundefined)
+// Compass (vundefined)
+// dart-sass (v1.6.2)
+// ----
+
+$backgroundColor: Green;
+$success: green;
+$primary: blue;
+$marginTop1: 1px;
+$marginTop2: 2px;
+.myclass {
+  color:$backgroundColor;
+}
+.btn-success{
+  background:$success;
+}
+.btn-primary {
+  background:$primary;
+  margin-top:$marginTop1;
+}
+
+@mixin changeColor {
+    background: blueviolet;
+}
+

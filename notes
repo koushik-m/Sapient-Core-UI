@@ -42,6 +42,3 @@ TEST DRIVEN DEVELOPMENT CODE (PRECAUTIONS TO BE TAKEN)
         This method will allow you to set the data or mock data or mock function 
         This mock data can be set before execution of every unit test.                                          
 
-
-    CHAINING DESIGN PATTERN
-    - 
