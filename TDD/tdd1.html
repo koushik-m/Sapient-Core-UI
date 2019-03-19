@@ -1,74 +1,122 @@
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Vending Machine Change Calculator TDD Tutorial</title>
-    <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
-    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
-    <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-  </head>
-  <body style='margin: 0 1em;'>
-    <div id='main'>
-      <h1>Vending Machine <em>Change Calculator</em></h1>
-      <h2>Calculate the change (<em>coins</em>) to return to a customer when they buy something.</h2>
-    </div>
 
-    <div id="qunit"></div>
-    <div id="qunit-fixture"></div>
-    <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
-    <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
-    <script>
-       var cointypes = [200, 100, 50, 20, 10, 5, 2, 1];
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Library Management TDD</title>
+  <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+  <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+</head>
 
-        function getChange(price, paid) {
-            var difference = paid - price;
-            var change = [];
+<body style='margin: 0 1em;'>
+  <div id='main'>
+    <h1>Library Management <em>TDD</em></h1>
+  </div>
 
-            cointypes.forEach(function (coin) {
-                // keep adding the current coin until it's more than the difference
-                while (difference >= coin) {
-                    change.push(coin);
-                    difference = difference - coin;
-                }
-            });
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
+  <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
 
-            return change;
+
+
+
+
+  <script>
+
+    var book = ['ab', 'abv', 'gad'];
+    function addBook(name) {
+ 
+      if (book.indexOf(name) > -1) {
+        return "This book is already there."
+      } else if (name.length > 10) {
+        return "Max length is 10";
+      }  else if(/[^a-zA-Z0-9]/.test(name)) {
+        return "Enter only alphanumeric";
+      }
+       
+      else {
+        return "You can add book now.";
+      }
+    }
+
+    function deleteBook(name) {
+      if (book.indexOf(name) < 0) {
+        return "Cannot delete book that is not there."
+      } else {
+        return "Book deleted";
+      }
+    }
+
+    function getBook() {
+      if (book.length <= 0) {
+        return "The book array is empty";
+      } else {
+        return book;
+      }
+    }
+
+
+
+    function updatePromise(user) {
+
+      return new Promise(function (resolve, reject) {
+        try {
+          resolve(book.filter(x => x == user).length >= 1)
+
+        } catch (ex) {
+          reject(ex);
         }
-        var userList;
-        function isAuthorizedPromise(user) {
-         
-            return new Promise(function(resolve, reject) {
-              try{
-              resolve(userList.filter(x=>x==user).length >= 1)
-         
-              } catch(ex) {
-                reject(ex);
-              }
-            
-            })
-          } 
-          
-          
-        
-    </script>
-    <!-- <script>
-      // This is what a simple unit test looks like:
-      test('This sample test should always pass!', function(assert) {
-        var result = 1 + 1;
-        assert.equal(result, 2); // just so we know everything loaded ok
-      });
-      // A failing test will be RED:
-      test('This is what a failing test looks like!', function(assert) {
-        var result = [1,2,3].indexOf(1);  // this should be 0
-        assert.equal(result, -1); // we *expect* this to fail
-      });
 
-      test('When payable=400 and paid=450, i should get the change', function(assert){
-        var result = getChange(400,450);
-        assert.equal(result, "Change provided.");
-      });
-      test('When payable=400 and paid="xxxx", i should get the change', function(){});
-    </script> -->
-    <script src="testPromise.js"></script>
-  </body>
+      })
+    }
+
+
+
+    test('When the book name already exists', function (assert) {
+      var result = addBook('abq');
+      assert.equal(result, "This book is already there.");
+    });
+
+    test('When the name of the book exceeds 10 characters', function (assert) {
+      var result = addBook('adfadfadfadfasfd');
+      assert.equal(result, "You can add book now.");
+    });
+
+    test('When the name of the book contains special characters', function (assert) {
+      var result = addBook('aa@#');
+      assert.equal(result, "You can add book now.");
+    });
+    test('Deleting a book that is not there in the array', function (assert) {
+      var result = deleteBook('abaaaa');
+      assert.equal(result, "Book deleted");
+    });
+
+    
+
+    test('If book array is empty', function (assert) {
+      var result = getBook();
+      // assert.equal(result, "The book array is not empty");
+      assert.deepEqual(result,book);
+    });
+
+    test('Checking for book name to update using promise', function (assert) {
+      book = ['ab', 'abv', 'gad'];
+
+      assert.expect(1);
+
+      let checkBook = updatePromise('aba');
+      return checkBook.then((result) => {
+        assert.equal(result, true);
+      })
+    })
+
+
+  </script>
+
+
+
+</body>
+
 </html>

@@ -16,11 +16,17 @@ describe('Verify Books',function(){
 });
 describe('Add Book Feature',function(){
     it('It should add a book to the array',function(){
-        let b = {id:1,author:'jjjj'};
+        let b = {id:1,author:'asdfg'};
         expect(bookStore.addBook(b).length).toBeGreaterThan(0);
     });
-    it('should verfiy the duplicate ID doesnot exist',function(){
-        let b = {id:1,author:'jjjj'};
+    it('should verfiy the duplicate ID does not exist',function(){
+        let b = {id:1,author:'asdfg'};
         expect(bookStore.addBook(b)).toBe('Duplicate id');
     });
+});
+
+describe('Delete Books', function() {
+    it('Check if the given book title is present in the list',function() {
+        expect(bookStore.getBooks).toBeDefined()
+    })
 })

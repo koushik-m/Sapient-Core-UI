@@ -42,3 +42,20 @@ TEST DRIVEN DEVELOPMENT CODE (PRECAUTIONS TO BE TAKEN)
         This method will allow you to set the data or mock data or mock function 
         This mock data can be set before execution of every unit test.                                          
 
+BUILT IN nodejs libraries
+    -file system(fs) - used for creating, deleting
+    -http
+    -https
+    -io
+    -cpu
+
+BEST PRACTICE TO INSTALL A MODULE FOR A PROJECT
+
+npm i --save {modulename}
+for multiple modules put the module names space seperated.
+
+the default node modules always consider the first parameter of callback function as error
+the second parameter will be the success info
+
+
+pipe method in node will take the data from one method and send that info to other method.
