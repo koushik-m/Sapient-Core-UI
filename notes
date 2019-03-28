@@ -89,3 +89,14 @@ SERVICE WORKERS
     installing
     activating
 
+
+ERROR HANDLING IN NODE JS
+
+    -in nodejs errors can be due to many reasons. the simple try catch blocks can handle the errors but if a global error is occuring then we will use domains to
+    -event driven approach
+    
+BODY-PARSER IN NODEJS
+the body parser will intercept the incoming request and makes a clean object.
+
+A middleware in nodejs will have access to the request and response
+we will apply the business logic and we will redirect the request to the next step.
