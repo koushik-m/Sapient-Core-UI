@@ -12,4 +12,6 @@ function bookTicket(mode) {
     };
 }
 var flight = bookTicket('flight');
+var train = bookTicket('train');
 flight('Banglore','trichy');
+train('Banglore','trichy');
